@@ -8,8 +8,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet"
         href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="./stylesheet.css" />
-    <title>UI</title>
+    <link rel="stylesheet" href="./css/stylesheet.css" />
+    <title>Canvas</title>
 </head>
 
 <body>
@@ -29,7 +29,7 @@
         <div class="strokes cate">
             <img src="https://img.icons8.com/material-rounded/40/000000/line.png" onclick="showHideStroke()" />
             <div class="cate-items" id="stroke-items">
-                <div class="cate-item-1">
+                <div class="cate-item-1" id="drawing-line">
                     <img src="https://img.icons8.com/material-rounded/35/000000/vertical-line.png" />
                 </div>
                 <div class="cate-item-2">
@@ -43,7 +43,7 @@
         <div class="shapes cate">
             <img src="https://img.icons8.com/material-rounded/40/000000/metamorphose.png" onclick="showHideShape()" />
             <div class="cate-items" id="shape-items">
-                <div class="cate-item-1">
+                <div class="cate-item-1" id="drawing-rectangle">
                     <img src="https://img.icons8.com/material-rounded/35/000000/rectangle-stroked.png" /> </div>
                 <div class="cate-item-2">
                     <img src="https://img.icons8.com/material-rounded/35/000000/circled.png" /> </div>
@@ -87,14 +87,14 @@
 <!---------------------------------- CATEGORIES - GENERAL (UNDO, REDO, , CLEAR, EXPORT) ---------------------------------->    
         <div class="general">
             <div class="steps">
-                <img src="https://img.icons8.com/material-rounded/24/000000/undo.png" />
+                <img src="https://img.icons8.com/material-rounded/24/000000/undo.png" id="undo" />
                 <br>
-                <img src="https://img.icons8.com/material-rounded/24/000000/redo.png" />
+                <img src="https://img.icons8.com/material-rounded/24/000000/redo.png" id="redo" />
             </div>
-            <div class="eraser">
+            <div class="eraser" id="eraser">
                 <img src="https://img.icons8.com/material-rounded/24/000000/erase.png" />
             </div>
-            <div class="clear">
+            <div class="clear" id="clear">
                 <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" /> </div>
             <div class="export">
                 <img src="https://img.icons8.com/material-rounded/24/000000/save.png" />
@@ -107,8 +107,64 @@
     </div>
 
 <!---------------------------------- SCRIPT ---------------------------------->    
-
-    <script src="./ui.js"></script>
+    <!-- UI functions -->
+    <script src="./js/utilities/ui.js"></script>
+         
+    <!-- jQuery -->
+         <script
+         src="https://code.jquery.com/jquery-3.5.1.js"
+         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+         crossorigin="anonymous"
+       ></script>
+    <!-- The drawing functionality  -->
+       <script
+         src="./js/utilities/canvas-common.js"
+         type="text/javascript"
+         async
+         defer
+       ></script>
+    <!-- The drawing line functionality  -->
+       <script
+         src="./js/lines/drawing-line.js"
+         type="text/javascript"
+         async
+         defer
+       ></script>
+    <!-- The drawing rectangle functionality  -->
+       <script
+         src="./js/shapes/drawing-rectangle.js"
+         type="text/javascript"
+         async
+         defer
+       ></script>
+    <!-- Eraser functionality -->
+       <script
+         src="./js/lines/drawing-eraser.js"
+         type="text/javascript"
+         async
+         defer
+       ></script>
+    <!-- Canvas functions -->
+         <script
+         src="./js/utilities/canvas-functions.js"
+         type="text/javascript"
+         async
+         defer
+       ></script>
+       <script type="text/javascript">
+       $(()=>{
+         currentFunction =  new DrawingLine(contextReal)
+         $("#drawing-rectangle").click(() => {
+           currentFunction = new DrawingRectangle(contextReal, contextDraft);
+         });
+         $("#drawing-line").click(() => {
+           currentFunction = new DrawingLine(contextReal);
+         });  
+         $("#eraser").click(() => {
+           currentFunction = new Eraser(contextReal);
+         }); 
+       })
+       </script>
 </body>
 
 </html>
