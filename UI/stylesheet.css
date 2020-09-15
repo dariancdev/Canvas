@@ -17,9 +17,9 @@ header{
   font-family: Fredoka One;
   font-size: 20px;
   letter-spacing: 20px;
-  color: rgb(50,50,50);
+  color: rgb(60, 60, 60);
   position: absolute;
-  top: 2%;
+  top: 1%;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -35,7 +35,7 @@ header{
 }
 
 .toolbox.left {
-  height: 70vh;
+  height: 80vh;
   left: 5px;
   top: 50%;
   transform: translateY(-50%);
@@ -44,7 +44,7 @@ header{
 }
 
 .toolbox.right {
-  height: 70vh;
+  height: 80vh;
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
@@ -54,7 +54,7 @@ header{
   filter: invert(15%) sepia(0%) saturate(482%) hue-rotate(209deg) brightness(90%) contrast(93%);
 }
 
-.general {
+.constant {
   border-bottom: 1px solid #999;
 }
 
@@ -130,4 +130,15 @@ header{
 .cate-item-3 {
   position: absolute;
   top: 68px;
+}
+
+.cate-item-4 {
+  position: absolute;
+  top: 136px;
+}
+
+/* ------------------ TOOLBOX RIGHT ------------------ */
+
+.toolbox.right img:hover{
+  cursor: pointer;
 }

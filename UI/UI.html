@@ -14,101 +14,111 @@
 
 <body>
 
-<!---------------------------------- LOGO ---------------------------------->
+    <!---------------------------------- LOGO ---------------------------------->
 
     <header>
-        <h1 id="logo">[Canvas]</h1>
+        <h1 id="logo">[Canvas!]</h1>
     </header>
 
-<!---------------------------------- TOOLBOX ---------------------------------->
+    <!---------------------------------- TOOLBOX ---------------------------------->
 
     <div class="toolbox left">
-        
-<!---------------------------------- CATEGORIES - STROKES ---------------------------------->
+
+        <!---------------------------------- CATEGORIES - STROKES ---------------------------------->
 
         <div class="strokes cate">
-            <img src="https://img.icons8.com/material-rounded/40/000000/line.png" onclick="showHideStroke()" />
+            <img src="https://img.icons8.com/material-rounded/40/000000/line.png" onclick="showHideStroke()" title="Stoke" />
             <div class="cate-items" id="stroke-items">
                 <div class="cate-item-1">
-                    <img src="https://img.icons8.com/material-rounded/35/000000/vertical-line.png" />
+                    <img src="https://img.icons8.com/material-rounded/35/000000/vertical-line.png" title="Straight Stroke" />
                 </div>
                 <div class="cate-item-2">
-                    <img src="https://img.icons8.com/material-rounded/35/000000/vector.png" />
+                    <img src="https://img.icons8.com/material-rounded/35/000000/vector.png" title="Arc"/>
                 </div>
             </div>
         </div>
 
-<!---------------------------------- CATEGORIES - SHAPES ---------------------------------->        
+        <!---------------------------------- CATEGORIES - SHAPES ---------------------------------->
 
         <div class="shapes cate">
-            <img src="https://img.icons8.com/material-rounded/40/000000/metamorphose.png" onclick="showHideShape()" />
+            <img src="https://img.icons8.com/material-rounded/40/000000/metamorphose.png" onclick="showHideShape()" title="Shapes"/>
             <div class="cate-items" id="shape-items">
                 <div class="cate-item-1">
-                    <img src="https://img.icons8.com/material-rounded/35/000000/rectangle-stroked.png" /> </div>
+                    <img src="https://img.icons8.com/material-rounded/35/000000/rectangle-stroked.png" title="Rectangle"/> </div>
                 <div class="cate-item-2">
-                    <img src="https://img.icons8.com/material-rounded/35/000000/circled.png" /> </div>
+                    <img src="https://img.icons8.com/material-rounded/35/000000/circled.png" title="Circle"/> </div>
                 <div class="cate-item-3">
-                    <img src="https://img.icons8.com/material-rounded/35/000000/triangle-stroked.png" /> </div>
+                    <img src="https://img.icons8.com/material-rounded/35/000000/triangle-stroked.png" title="Triangle"/> </div>
+                <div class="cate-item-4">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/polygone.png" title="Polygon"/> </div>
             </div>
         </div>
 
-<!---------------------------------- CATEGORIES - TEXT ---------------------------------->    
+        <!---------------------------------- CATEGORIES - TEXT ---------------------------------->
 
         <div class="text cate">
-            <img src="https://img.icons8.com/material-rounded/40/000000/text.png" />
+            <img src="https://img.icons8.com/material-rounded/40/000000/text.png" title="Text" />
         </div>
 
         <div class="tools cate">
-            <img src="https://img.icons8.com/material-rounded/35/000000/pencil-tip.png" onclick="showHideTools()" />
+            <img src="https://img.icons8.com/material-rounded/35/000000/pencil-tip.png" onclick="showHideTools()" title="Paint Tool"/>
             <div class="cate-items" id="tool-items">
                 <div class="cate-item-1">
-                    <img src="https://img.icons8.com/material-rounded/35/000000/pencil--v1.png"/> </div>
+                    <img src="https://img.icons8.com/material-rounded/35/000000/pencil--v1.png" title="Pencil" /> </div>
                 <div class="cate-item-2">
-                    <img src="https://img.icons8.com/material-rounded/35/000000/paint.png"/> </div>
+                    <img src="https://img.icons8.com/material-rounded/35/000000/paint.png" title="Brush"/> </div>
             </div>
         </div>
 
-<!---------------------------------- CATEGORIES - MEMES ---------------------------------->            
+        <!---------------------------------- CATEGORIES - MEMES ---------------------------------->
 
         <div class="meme cate">
-            <img src="https://img.icons8.com/ios/40/000000/doge.png" />
+            <img src="https://img.icons8.com/ios/40/000000/doge.png" title="MEMES :0)"/>
         </div>
 
     </div>
 
-<!---------------------------------- CANVAS ---------------------------------->    
+    <!---------------------------------- CANVAS ---------------------------------->
 
-    <canvas id="canvas" width="600" height="600"></canvas>
+    <canvas id="canvas" width="800" height="600"></canvas>
 
-<!---------------------------------- TOOLBAR - RIGHT ---------------------------------->    
+    <!---------------------------------- TOOLBAR - RIGHT ---------------------------------->
 
     <div class="toolbox right">
 
-<!---------------------------------- CATEGORIES - GENERAL (UNDO, REDO, , CLEAR, EXPORT) ---------------------------------->    
-        <div class="general">
-            <div class="steps">
-                <img src="https://img.icons8.com/material-rounded/24/000000/undo.png" />
+        <!---------------------------------- CATEGORIES - GENERAL (UNDO, REDO, , CLEAR, EXPORT) ---------------------------------->
+        <div class="toolbox-general">
+            <div class="constant">
+                <img src="https://img.icons8.com/material-rounded/24/000000/undo.png" title="Undo"/>
                 <br>
-                <img src="https://img.icons8.com/material-rounded/24/000000/redo.png" />
+                <img src="https://img.icons8.com/material-rounded/24/000000/redo.png" title="Redo"/>
             </div>
-            <div class="eraser">
-                <img src="https://img.icons8.com/material-rounded/24/000000/erase.png" />
+            <div class="constant">
+                <img src="https://img.icons8.com/material-rounded/24/000000/save.png" title="Export"/>
             </div>
-            <div class="clear">
-                <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" /> </div>
-            <div class="export">
-                <img src="https://img.icons8.com/material-rounded/24/000000/save.png" />
+            <div class="constant">
+                <img src="https://img.icons8.com/material-rounded/24/000000/erase.png" title="Eraser"/>
+                <br>
+                <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" title="Clear" />
+            </div>
+            <div class="constant">
+                <img src="https://img.icons8.com/material-rounded/24/000000/paint-palette.png" title="Colour Palette"/>
+                <br>
+                <img src="https://img.icons8.com/material-rounded/24/000000/fill-color.png" title="Colour Fill"/>
+            </div>
+            <div class="constant">
+                <img src="https://img.icons8.com/material-rounded/24/000000/line-width.png" title="Line Width"/>
+            </div>
+
+            <!---------------------------------- CATEGORIES - DYNAMIC ---------------------------------->
+            <div class="dynamic">
+
             </div>
         </div>
-<!---------------------------------- CATEGORIES - DYNAMIC ---------------------------------->            
-        <div class="interactive">
 
-        </div>
-    </div>
+        <!---------------------------------- SCRIPT ---------------------------------->
 
-<!---------------------------------- SCRIPT ---------------------------------->    
-
-    <script src="./ui.js"></script>
+        <script src="./ui.js"></script>
 </body>
 
 </html>
