@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <title>UI</title>
+</head>
+
+<body>
+
+<!---------------------------------- LOGO ---------------------------------->
+
+    <header>
+        <h1 id="logo">[Canvas]</h1>
+    </header>
+
+<!---------------------------------- TOOLBOX ---------------------------------->
+
+    <div class="toolbox left">
+        
+<!---------------------------------- CATEGORIES - STROKES ---------------------------------->
+
+        <div class="strokes cate">
+            <img src="https://img.icons8.com/material-rounded/40/000000/line.png" onclick="showHideStroke()" />
+            <div class="cate-items" id="stroke-items">
+                <div class="cate-item-1">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/vertical-line.png" />
+                </div>
+                <div class="cate-item-2">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/vector.png" />
+                </div>
+            </div>
+        </div>
+
+<!---------------------------------- CATEGORIES - SHAPES ---------------------------------->        
+
+        <div class="shapes cate">
+            <img src="https://img.icons8.com/material-rounded/40/000000/metamorphose.png" onclick="showHideShape()" />
+            <div class="cate-items" id="shape-items">
+                <div class="cate-item-1">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/rectangle-stroked.png" /> </div>
+                <div class="cate-item-2">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/circled.png" /> </div>
+                <div class="cate-item-3">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/triangle-stroked.png" /> </div>
+            </div>
+        </div>
+
+<!---------------------------------- CATEGORIES - TEXT ---------------------------------->    
+
+        <div class="text cate">
+            <img src="https://img.icons8.com/material-rounded/40/000000/text.png" />
+        </div>
+
+        <div class="tools cate">
+            <img src="https://img.icons8.com/material-rounded/35/000000/pencil-tip.png" onclick="showHideTools()" />
+            <div class="cate-items" id="tool-items">
+                <div class="cate-item-1">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/pencil--v1.png"/> </div>
+                <div class="cate-item-2">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/paint.png"/> </div>
+            </div>
+        </div>
+
+<!---------------------------------- CATEGORIES - MEMES ---------------------------------->            
+
+        <div class="meme cate">
+            <img src="https://img.icons8.com/ios/40/000000/doge.png" />
+        </div>
+
+    </div>
+
+<!---------------------------------- CANVAS ---------------------------------->    
+
+    <canvas id="canvas" width="600" height="600"></canvas>
+
+<!---------------------------------- TOOLBAR - RIGHT ---------------------------------->    
+
+    <div class="toolbox right">
+
+<!---------------------------------- CATEGORIES - GENERAL (UNDO, REDO, , CLEAR, EXPORT) ---------------------------------->    
+        <div class="general">
+            <div class="steps">
+                <img src="https://img.icons8.com/material-rounded/24/000000/undo.png" />
+                <br>
+                <img src="https://img.icons8.com/material-rounded/24/000000/redo.png" />
+            </div>
+            <div class="eraser">
+                <img src="https://img.icons8.com/material-rounded/24/000000/erase.png" />
+            </div>
+            <div class="clear">
+                <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" /> </div>
+            <div class="export">
+                <img src="https://img.icons8.com/material-rounded/24/000000/save.png" />
+            </div>
+        </div>
+<!---------------------------------- CATEGORIES - DYNAMIC ---------------------------------->            
+        <div class="interactive">
+
+        </div>
+    </div>
+
+<!---------------------------------- SCRIPT ---------------------------------->    
+
+    <script src="./ui.js"></script>
+</body>
+
+</html>

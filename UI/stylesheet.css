@@ -1,0 +1,133 @@
+/* ------------------ FONTS ------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* ------------------ GENERAL ------------------ */
+
+body {
+  margin: 0px;
+  background-color: rgb(230, 230, 230)
+}
+
+header{
+  width: 100vw;
+  height:10vh;
+}
+
+#logo {
+  font-family: Fredoka One;
+  font-size: 20px;
+  letter-spacing: 20px;
+  color: rgb(50,50,50);
+  position: absolute;
+  top: 2%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+/* ------------------ TOOLBOX & CANVAS ------------------ */
+
+.toolbox {
+  position: absolute;
+  background-color: rgb(240, 240, 240);
+  width: 75px;
+  box-shadow: 0.5px 0.5px 5px 0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.toolbox.left {
+  height: 70vh;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbox.right {
+  height: 70vh;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toolbox img{
+  filter: invert(15%) sepia(0%) saturate(482%) hue-rotate(209deg) brightness(90%) contrast(93%);
+}
+
+.general {
+  border-bottom: 1px solid #999;
+}
+
+#canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(250, 250, 250);
+  box-shadow: 0.5px 0.5px 5px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------ ICONS ------------------ */
+
+.toolbox img {
+  padding: 7px 0 7px 0;
+  color: rgb(100, 100, 100);
+}
+
+.toolbox img :hover {
+  cursor: pointer;
+}
+
+/* ------------------ POPUPS ------------------ */
+.cate {
+  position: relative;
+  padding: 7px 0 7px 0;
+  height: 60px;
+  width: 60px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.cate:hover {
+  cursor: pointer;
+}
+
+.cate-items {
+  position: absolute;
+  left: 100px;
+  display: none;
+}
+
+.cate-items div {
+  position: absolute;
+  left: -15px;
+  background-color:  rgb(240, 240, 240);
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 0.5px 0.5px 5px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.cate-items img {
+  position: absolute;
+  left: 13px;
+  bottom: 5.5px;
+}
+
+.cate-item-1 {
+  position: absolute;
+  bottom: 8px;
+}
+
+.cate-item-2 {
+  position: absolute;
+  /* top: 22px; */
+}
+
+.cate-item-3 {
+  position: absolute;
+  top: 68px;
+}
