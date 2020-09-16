@@ -57,19 +57,20 @@ header{
 .general {
   border-bottom: 1px solid #999;
 }
-#canvas-container{
-  /* top: 50%;
-  left: 50%; */
-  /* transform: translate(-50%, -50%); */
-  height: 600px;
-  width: 600px;
-}
-#canvas-real {
+/* #canvas-container{ */
+ 
+  /* height: 600px;
+  width: 600px; */
+/* } */
+.canvas {
+   top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
   position: absolute;
   box-shadow: 0.5px 0.5px 5px 0.5px rgba(0, 0, 0, 0.2);
 }
 #canvas-draft{
- 
+  /* transform: translate(90%, 13.5%); */
 }
 
 /* ------------------ ICONS ------------------ */
