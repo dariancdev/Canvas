@@ -110,23 +110,23 @@
                 <br>
                 <img src="https://img.icons8.com/material-rounded/24/000000/redo.png" id="redo" />
             </div>
-            <div class="constant">
-                <img src="https://img.icons8.com/material-rounded/24/000000/save.png" title="Export" />
-            </div>
+            <div class="export" id="download">
+                <img src="https://img.icons8.com/material-rounded/24/000000/save.png" />
             <div class="constant">
                 <img src="https://img.icons8.com/material-rounded/24/000000/erase.png" title="Eraser" />
-                <br>
-                <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" title="Clear" />
-            </div>
+                  </div>
+              <div class="clear" id="clear">
+                <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" /> </div>
+            <div class="constant">
+                <img src="https://img.icons8.com/material-rounded/24/000000/line-width.png" title="Line Width" />
+          </div>
             <div class="constant">
                 <img src="https://img.icons8.com/material-rounded/24/000000/paint-palette.png" title="Colour Palette" />
                 <br>
                 <img src="https://img.icons8.com/material-rounded/24/000000/fill-color.png" title="Colour Fill" />
             </div>
-            <div class="constant">
-                <img src="https://img.icons8.com/material-rounded/24/000000/line-width.png" title="Line Width" />
-            </div>
-        </div>
+          
+
 <!---------------------------------- CATEGORIES - DYNAMIC ---------------------------------->            
         <div class="interactive">
               <!-- Line Width -->
@@ -155,15 +155,11 @@
        <script
          src="./js/utilities/canvas-common.js"
          type="text/javascript"
-         async
-         defer
        ></script>
     <!-- The drawing line functionality  -->
        <script
          src="./js/lines/drawing-line.js"
          type="text/javascript"
-         async
-         defer
        ></script>
     <!-- The drawing brush functionality  -->
         <script
@@ -177,22 +173,21 @@
        <script
          src="./js/shapes/drawing-rectangle.js"
          type="text/javascript"
-         async
-         defer
        ></script>
     <!-- Eraser functionality -->
        <script
          src="./js/lines/drawing-eraser.js"
          type="text/javascript"
-         async
-         defer
        ></script>
+       <!-- Draw functions -->
+       <script
+       src="./js/utilities/draw-functions.js"
+       type="text/javascript"
+     ></script>
     <!-- Canvas functions -->
          <script
          src="./js/utilities/canvas-functions.js"
          type="text/javascript"
-         async
-         defer
        ></script>
        <script type="text/javascript">
        $(()=>{

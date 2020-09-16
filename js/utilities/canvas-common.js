@@ -4,12 +4,7 @@ let canvasDraft = document.getElementById("canvas-draft");
 let contextDraft = canvasDraft.getContext("2d");
 let currentFunction;
 let dragging = false;
-/************************************************************************************ */
-//this is to let the undo and redo buttons work
-contextReal.fillStyle = "white";
-contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
 
-/********************************************************************************* */
 $("#canvas-draft").mousedown(function (e) {
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;

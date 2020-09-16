@@ -31,13 +31,7 @@ class DrawingLine extends PaintFunction {
       this.context.closePath();
       this.context.stroke();
     }
-  // this onFinish code works as well
-    // onFinish(){
-    //   pushedArray[step] = new Image();
-    //   pushedArray[step].src = canvasReal.toDataURL();
-    //   step++;
-    //   console.log(step)
-    // }
+ 
     onFinish(){
       step++;
       console.log(step);
