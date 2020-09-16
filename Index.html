@@ -29,13 +29,25 @@
 <!---------------------------------- TOOLBOX ---------------------------------->
 
     <div class="toolbox left">
-        
+
+<!-------------------------- CATEGORIES - DRAW------------------------------>
+   
+        <div class="tools cate">
+            <img src="https://img.icons8.com/material-rounded/35/000000/pencil-tip.png" onclick="showHideTools()" />
+            <div class="cate-items" id="tool-items">
+                <div class="cate-item-1" id="drawing-line">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/pencil--v1.png"/> </div>
+                <div class="cate-item-2" id="drawing-brush">
+                    <img src="https://img.icons8.com/material-rounded/35/000000/paint.png"/> </div>
+            </div>
+        </div>
+
 <!---------------------------------- CATEGORIES - STROKES ---------------------------------->
 
         <div class="strokes cate">
             <img src="https://img.icons8.com/material-rounded/40/000000/line.png" onclick="showHideStroke()" />
             <div class="cate-items" id="stroke-items">
-                <div class="cate-item-1">
+                <div class="cate-item-1" id="straight-line">
                     <img src="https://img.icons8.com/material-rounded/35/000000/vertical-line.png" />
                 </div>
                 <div class="cate-item-2">
@@ -64,16 +76,6 @@
             <img src="https://img.icons8.com/material-rounded/40/000000/text.png" />
         </div>
 
-        <div class="tools cate">
-            <img src="https://img.icons8.com/material-rounded/35/000000/pencil-tip.png" onclick="showHideTools()" />
-            <div class="cate-items" id="tool-items">
-                <div class="cate-item-1" id="drawing-line">
-                    <img src="https://img.icons8.com/material-rounded/35/000000/pencil--v1.png"/> </div>
-                <div class="cate-item-2" id="drawing-brush">
-                    <img src="https://img.icons8.com/material-rounded/35/000000/paint.png"/> </div>
-            </div>
-        </div>
-
 <!---------------------------------- CATEGORIES - MEMES ---------------------------------->            
 
         <div class="meme cate">
@@ -89,14 +91,14 @@
         <canvas
           id="canvas-real"
           class="canvas"
-          width="800px"
-          height="600px"
+          width="1000px"
+          height="700px"
         ></canvas>
         <canvas
           id="canvas-draft"
           class="canvas"
-          width="800px"
-          height="600px"
+          width="1000px"
+          height="700px"
         ></canvas>
 
 <!---------------------------------- TOOLBAR - RIGHT ---------------------------------->    
@@ -105,20 +107,21 @@
 
 <!---------------------------------- CATEGORIES - GENERAL (UNDO, REDO, , CLEAR, EXPORT) ---------------------------------->    
         <div class="general">
-            <div class="steps">
-                <img src="https://img.icons8.com/material-rounded/24/000000/undo.png" id="undo" />
-                <br>
-                <img src="https://img.icons8.com/material-rounded/24/000000/redo.png" id="redo" />
-            </div>
-            <div class="constant" id="eraser">
-                <img src="https://img.icons8.com/material-rounded/24/000000/erase.png" title="Eraser" />
+            <div  id="eraser">
+                <img src="https://img.icons8.com/material-rounded/24/000000/erase.png" title="Eraser" title="Eraser"/>
                   </div>
-                  <div class="clear" id="clear">
-                    <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" /> </div>
-            <div class="export" id="download">
-                <img src="https://img.icons8.com/material-rounded/24/000000/save.png" />
+            <div class="steps">
+                <img src="https://img.icons8.com/material-rounded/24/000000/undo.png" id="undo" title="Undo" />
+                <br>
+                <img src="https://img.icons8.com/material-rounded/24/000000/redo.png" id="redo" title="Redo"/>
             </div>
-            <div class="constant">
+            <div class="clear" id="clear">
+                    <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" title="Clear"/> 
+            </div>
+            <div class="export constant" id="download">
+                <img src="https://img.icons8.com/material-rounded/24/000000/save.png" title="Download Image" />
+            </div>
+            <div>
                 <img src="https://img.icons8.com/material-rounded/24/000000/line-width.png" title="Line Width" />
           </div>
             <div class="constant">
@@ -126,6 +129,7 @@
                 <br>
                 <img src="https://img.icons8.com/material-rounded/24/000000/fill-color.png" title="Colour Fill" />
             </div>
+        </div>
           
 
 <!---------------------------------- CATEGORIES - DYNAMIC ---------------------------------->            
@@ -143,15 +147,18 @@
     </div>
 
 <!---------------------------------- SCRIPT ---------------------------------->    
-    <!-- UI functions -->
-    <script src="./js/utilities/ui.js"></script>
-         
+     <!-- UI functions -->
+     <script 
+     src="./js/utilities/ui-functions.js">
+     type="text/javascript"
+     </script>
     <!-- jQuery -->
          <script
          src="https://code.jquery.com/jquery-3.5.1.js"
          integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
          crossorigin="anonymous"
        ></script>
+   
     <!-- The drawing functionality  -->
        <script
          src="./js/utilities/canvas-common.js"
@@ -162,6 +169,11 @@
          src="./js/lines/drawing-line.js"
          type="text/javascript"
        ></script>
+       <!-- The stright line functionality  -->
+       <script
+         src="./js/lines/straight-line.js"
+         type="text/javascript"
+       ></script>
     <!-- The drawing brush functionality  -->
         <script
         src="./js/lines/drawing-brush.js"
@@ -169,7 +181,6 @@
         async
         defer
         ></script>
-    
     <!-- The drawing rectangle functionality  -->
        <script
          src="./js/shapes/drawing-rectangle.js"
@@ -205,8 +216,10 @@
          $("#eraser").click(() => {
            currentFunction = new Eraser(contextReal);
          }); 
+         $("#straight-line").click(() => {
+           currentFunction = new StraightLine(contextReal);
+        });
        })
        </script>
 </body>
-
 </html>

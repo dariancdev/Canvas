@@ -5,7 +5,8 @@
 
 body {
   margin: 0px;
-  background-color: rgb(230, 230, 230)
+  background-color: rgb(230, 230, 230);
+  overflow-x: hidden;
 }
 
 header{
@@ -92,6 +93,7 @@ header{
   bottom: 0;
   left: 0;
   right: 0;
+  z-index: 5;
 }
 
 .cate:hover {
