@@ -1,10 +1,3 @@
-class DrawingRectangle extends PaintFunction {
-    constructor(contextReal, contextDraft) {
-      super();
-      this.contextReal = contextReal;
-      this.contextDraft = contextDraft;
-    }
-  
     onMouseDown(coord, event) {
       this.contextReal.fillStyle = objectFill.value;
       this.origX = coord[0];
@@ -44,3 +37,4 @@ class DrawingRectangle extends PaintFunction {
       pushedArray.push(canvasReal.toDataURL());
     }
   }
+

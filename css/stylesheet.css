@@ -54,12 +54,12 @@ header{
   filter: invert(15%) sepia(0%) saturate(482%) hue-rotate(209deg) brightness(90%) contrast(93%);
 }
 
-.general {
+.constant {
   border-bottom: 1px solid #999;
 }
 
 .canvas {
-   top: 50%;
+  top: 50%;
   left: 50%; 
   transform: translate(-50%, -50%);
   position: absolute;
@@ -68,6 +68,7 @@ header{
 .constant {
   border-bottom: 1px solid #999;
 }
+
 
 /* ------------------ ICONS ------------------ */
 

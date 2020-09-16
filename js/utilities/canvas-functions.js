@@ -5,9 +5,10 @@ contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
 
 /*********************************************************************************/
 
+
 /**************clear canvas function*****************/
 let clearCanvas = document.getElementById("clear");
-clearCanvas.addEventListener("click",eraseCanvas);
+clearCanvas.addEventListener("click", eraseCanvas);
 
 function eraseCanvas(){
 contextReal.fillStyle = "white";
@@ -23,7 +24,7 @@ let canvasPic = new Image();
 
 /***************Undo function****************/
 let undobtn = document.getElementById("undo");
-undobtn.addEventListener("click",undo);
+undobtn.addEventListener("click", undo);
 
 function undo(){
   if(step > 0) {
@@ -31,8 +32,8 @@ function undo(){
     console.log(step);
     canvasPic.src = pushedArray[step];
     // contextReal.clearRect(0,0, canvasReal.width, canvasReal.height);
-    canvasPic.onload = function(){
-      contextReal.drawImage(canvasPic,0,0);
+    canvasPic.onload = function () {
+      contextReal.drawImage(canvasPic, 0, 0);
     }
   }
 }
@@ -41,24 +42,25 @@ function undo(){
 let redobtn = document.getElementById("redo");
 redobtn.addEventListener("click",redo);
 
-function redo(){
-  if(step < pushedArray.length - 1){
+function redo() {
+  if (step < pushedArray.length - 1) {
     step++;
     console.log(step);
     canvasPic.src = pushedArray[step];
     // contextReal.clearRect(0,0, canvasReal.width, canvasReal.height);
-    canvasPic.onload = function(){
-      contextReal.drawImage(canvasPic,0,0);
+    canvasPic.onload = function () {
+      contextReal.drawImage(canvasPic, 0, 0);
     }
   }
 }
 //decided to have a white background on the canvas rather than having it clear everytime undo/redo was pressed, as it would cause flickering 
 
+
 /**************Starting screenshot***************/
 function onFinish(){
   step++;
   console.log(step);
-  if(step < pushedArray.length){
+  if (step < pushedArray.length) {
     pushedArray.length = step;
   }
   pushedArray.push(canvasReal.toDataURL());
