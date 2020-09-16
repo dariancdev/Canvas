@@ -65,8 +65,8 @@ header{
   position: absolute;
   box-shadow: 0.5px 0.5px 5px 0.5px rgba(0, 0, 0, 0.2);
 }
-#canvas-draft{
-  
+.constant {
+  border-bottom: 1px solid #999;
 }
 
 /* ------------------ ICONS ------------------ */
