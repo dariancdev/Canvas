@@ -20,7 +20,7 @@ function changeObjectFill() {
 let strokeColour = document.getElementById("strokeFill");
 strokeColour.addEventListener("input", changeStrokeFill);
 
-function changeStrokeFill(){
+function changeStrokeFill() {
   contextReal.strokestyle = this.value;
 }
 /***************************************************************************** */
@@ -29,10 +29,10 @@ function changeStrokeFill(){
 
 //clear canvas function 
 let clearCanvas = document.getElementById("clear");
-clearCanvas.addEventListener("click",eraseCanvas);
+clearCanvas.addEventListener("click", eraseCanvas);
 
-function eraseCanvas(){
-  contextReal.clearRect(0,0, canvasReal.width, canvasReal.height);
+function eraseCanvas() {
+  contextReal.clearRect(0, 0, canvasReal.width, canvasReal.height);
 }
 
 //making an array to push undo and redo actions onto 
@@ -43,7 +43,7 @@ let canvasPic = new Image();
 
 //undo function
 let undobtn = document.getElementById("undo");
-undobtn.addEventListener("click",undo);
+undobtn.addEventListener("click", undo);
 
 // function undo(){
 //     if(step > 1 ){
@@ -53,21 +53,21 @@ undobtn.addEventListener("click",undo);
 //         contextReal.drawImage(pushedArray[step - 1],0,0);
 //     }
 // }
-function undo(){
-  if(step > 0) {
+function undo() {
+  if (step > 0) {
     step--;
     console.log(step);
     canvasPic.src = pushedArray[step];
     // contextReal.clearRect(0,0, canvasReal.width, canvasReal.height);
-    canvasPic.onload = function(){
-      contextReal.drawImage(canvasPic,0,0);
+    canvasPic.onload = function () {
+      contextReal.drawImage(canvasPic, 0, 0);
     }
   }
 }
 
 //redo function
 let redobtn = document.getElementById("redo");
-redobtn.addEventListener("click",redo)
+redobtn.addEventListener("click", redo)
 
 // function redo(){
 //     if(step == savePoint && step < pushedArray.length){
@@ -78,24 +78,24 @@ redobtn.addEventListener("click",redo)
 //     }
 // }
 
-function redo(){
-  if(step < pushedArray.length - 1){
+function redo() {
+  if (step < pushedArray.length - 1) {
     step++;
     console.log(step);
     canvasPic.src = pushedArray[step];
     // contextReal.clearRect(0,0, canvasReal.width, canvasReal.height);
-    canvasPic.onload = function(){
-      contextReal.drawImage(canvasPic,0,0);
+    canvasPic.onload = function () {
+      contextReal.drawImage(canvasPic, 0, 0);
     }
   }
 }
 // there were two seperate undo/redo/onFinish functions done, because before I thought i'd made a mistake with how i'd done the functions. I didn't, the issue was something else, both actually work
 //decided to have a white background on the canvas rather than having it clear everytime undo/redo was pressed, as it would cause flickering 
 
-function onFinish(){
+function onFinish() {
   step++;
   console.log(step);
-  if(step < pushedArray.length){
+  if (step < pushedArray.length) {
     pushedArray.length = step;
   }
   pushedArray.push(canvasReal.toDataURL());
