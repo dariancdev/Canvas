@@ -5,35 +5,23 @@
 
 body {
   margin: 0px;
-  background-color: rgb(230, 230, 230);
-  transition: linear 1s;
+  background-color: rgb(230, 230, 230)
 }
 
 header{
   width: 100vw;
   height:10vh;
-  display: inline-flex;
-  justify-content: center;
 }
 
 #logo {
   font-family: Fredoka One;
   font-size: 20px;
   letter-spacing: 20px;
-  color: rgb(60, 60, 60);
+  color: rgb(50,50,50);
   position: absolute;
-  top: 1%;
+  top: 2%;
   left: 50%;
   transform: translate(-50%, 0);
-}
-
-#parrotContainer{
-  padding-top: 5vh;
-  display: none;
-}
-
-#parrotContainer img{
-  height: 50px;
 }
 
 /* ------------------ TOOLBOX & CANVAS ------------------ */
@@ -47,7 +35,7 @@ header{
 }
 
 .toolbox.left {
-  height: 80vh;
+  height: 70vh;
   left: 5px;
   top: 50%;
   transform: translateY(-50%);
@@ -56,7 +44,7 @@ header{
 }
 
 .toolbox.right {
-  height: 80vh;
+  height: 70vh;
   right: 5px;
   top: 50%;
   transform: translateY(-50%);
@@ -70,14 +58,16 @@ header{
   border-bottom: 1px solid #999;
 }
 
-#canvas {
-  position: absolute;
+.canvas {
   top: 50%;
-  left: 50%;
+  left: 50%; 
   transform: translate(-50%, -50%);
-  background-color: rgb(250, 250, 250);
+  position: absolute;
   box-shadow: 0.5px 0.5px 5px 0.5px rgba(0, 0, 0, 0.2);
 }
+/* #canvas-draft{ */
+  /* transform: translate(90%, 13.5%); */
+/* } */
 
 /* ------------------ ICONS ------------------ */
 
@@ -142,47 +132,4 @@ header{
 .cate-item-3 {
   position: absolute;
   top: 68px;
-}
-
-.cate-item-4 {
-  position: absolute;
-  top: 136px;
-}
-
-/* ------------------ TOOLBOX RIGHT ------------------ */
-
-.toolbox.right img:hover{
-  cursor: pointer;
-}
-
-/* ------------------ DARK & PARTY MODES ------------------ */
-.bodyPartyMode{
-  animation: blinkingBackground 2s infinite;
-  }
-  @keyframes blinkingBackground{
-    0%		{ background-color: #10c018;}
-    25%		{ background-color: #1056c0;}
-    50%		{ background-color: #ef0a1a;}
-    75%		{ background-color: #254878;}
-    100%	        { background-color: #04a1d5;}
-  }
-/* 
-.partyParrot{
-  display: block;
-} */
-
-.h1BWToggle{
-  font-family: Fredoka One;
-  font-size: 20px;
-  letter-spacing: 20px;
-  position: absolute;
-  top: 1%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  color: #e0e0e0;
-}
-
-.bodyDarkMode{
-  background-color: rgb(60, 60, 60);
-  transition: linear 1s;
 }

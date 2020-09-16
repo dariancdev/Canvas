@@ -1,5 +1,3 @@
-/* ------------------ SHOW & HIDE DROP-DOWN MENU ------------------ */
-
 var a;
 function showHideStroke() {
     if (a == 1) {
@@ -35,31 +33,4 @@ function showHideTools() {
         document.getElementById("shape-items").style.display = "none";
         return a = 1;
     }
-}
-
-/* ------------------ DARK & PARTY MODES ------------------ */
-
-function partyMode() {
-    var element = document.body;
-    element.classList.toggle("bodyPartyMode");
-}
-
-function showHideParrot() {
-    if (a == 1) {
-        document.getElementById("parrotContainer").style.display = "none";
-        return a = 0;
-    } else {
-        document.getElementById("parrotContainer").style.display = "block";
-        return a = 1;
-    }
-}
-
-function bwLogo(){
-    var element = document.getElementById("logo");
-    element.classList.toggle("h1BWToggle");
-}
-
-function darkMode(){
-    var element = document.body;
-    element.classList.toggle("bodyDarkMode");
 }
