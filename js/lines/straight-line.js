@@ -1,19 +1,25 @@
 class StraightLine extends PaintFunction{
-    constructor(contextReal) {
+    constructor(contextReal,contextDraft) {
         super();
-        this.context = contextReal;
+        this.contextReal = contextReal;
+        this.contextDraft = contextDraft;
       }
       onMouseDown(coord, event) {
-        this.context.strokeStyle = strokeColour.value;
-        this.context.lineJoin = "round";
-        this.context.lineCap = "round";
-        this.context.lineWidth = lineWidth.value;
-        this.context.beginPath();
-        this.context.moveTo(coord[0], coord[1]);
-        this.draw(coord[0], coord[1]);
+        this.contextReal.strokeStyle = strokeColour.value;
+        this.contextDraft.strokeStyle = strokeColour.value;
+        this.contextReal.lineJoin = "round";
+        this.contextDraft.lineJoin = "round";
+        this.contextReal.lineCap = "round";
+        this.contextDraft.lineCap = "round";
+        this.contextReal.lineWidth = lineWidth.value;
+        this.contextDraft.lineWidth = lineWidth.value;
+        this.origX = coord[0];
+        this.origY = coord[1];
+        this.contextReal.beginPath();
+        this.contextReal.moveTo(this.origX, this.origY);
       }
       onDragging(coord, event) {
-        this.draw(coord[0], coord[1]);
+        this.contextDraft.closePath();
       }
     
       onMouseMove() {}
@@ -22,13 +28,6 @@ class StraightLine extends PaintFunction{
       }
       onMouseLeave() {}
       onMouseEnter() {}
-    
-      draw(x, y) {
-        // this.context.moveTo(x, y);
-        this.context.lineTo(x, y);
-        this.context.closePath();
-        this.context.stroke();
-      }
    
       onFinish(){
         step++;
