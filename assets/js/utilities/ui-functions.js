@@ -4,6 +4,7 @@ let a;
 let strokeItems =  document.getElementById("stroke-items")
 let shapeItems =  document.getElementById("shape-items")
 let toolItems =  document.getElementById("tool-items")
+let modeItems = document.getElementById("mode-items")
 
 function showHideStroke() {
     if (a === 1 && strokeItems.style.display === "block") {
@@ -13,6 +14,7 @@ function showHideStroke() {
         strokeItems.style.display = "block";
         shapeItems.style.display = "none";
         toolItems.style.display = "none";
+        modeItems.style.display = "none";
         a = 1;
     }
 }
@@ -25,6 +27,7 @@ function showHideShape() {
         shapeItems.style.display = "block";
         strokeItems.style.display = "none";
         toolItems.style.display = "none";
+        modeItems.style.display = "none";
         a = 1;
     }
 }
@@ -37,9 +40,24 @@ function showHideTools() {
         toolItems.style.display = "block";
         strokeItems.style.display = "none";
         shapeItems.style.display = "none";
+        modeItems.style.display = "none";
         a = 1;
     }
 }
+
+function showHideMode() {
+    if (a === 1 && modeItems.style.display === "block") {
+        modeItems.style.display = "none";
+        a = 0;
+    } else {
+        modeItems.style.display = "block";
+        toolItems.style.display = "none";
+        strokeItems.style.display = "none";
+        shapeItems.style.display = "none";
+        a = 1;
+    }
+}
+
 
 /* ------------------ DARK & PARTY MODES ------------------ */
 
@@ -48,13 +66,15 @@ function partyMode() {
     element.classList.toggle("bodyPartyMode");
 }
 
+let parrotContainer = document.getElementById("parrotContainer")
+
 function showHideParrot() {
-    if (a == 1) {
-        document.getElementById("parrotContainer").style.display = "none";
-        return a = 0;
+    if (a === 1 && parrotContainer.style.display === "block") {
+        parrotContainer.style.display = "none";
+        a = 0;
     } else {
-        document.getElementById("parrotContainer").style.display = "block";
-        return a = 1;
+        parrotContainer.style.display = "block";
+        a = 1;
     }
 }
 

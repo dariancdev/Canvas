@@ -34,7 +34,7 @@
         <!-------------------------- CATEGORIES - DRAW------------------------------>
 
         <div class="tools cate">
-            <img src="https://img.icons8.com/material-rounded/35/000000/pencil-tip.png" onclick="showHideTools()" />
+            <img src="https://img.icons8.com/material-rounded/35/000000/pencil-tip.png" onclick="showHideTools() />
             <div class="cate-items" id="tool-items">
                 <div class="cate-item-1" id="drawing-line">
                     <img src="https://img.icons8.com/material-rounded/35/000000/pencil--v1.png" /> </div>
@@ -80,7 +80,13 @@
         <!---------------------------------- CATEGORIES - MEMES ---------------------------------->
 
         <div class="meme cate">
-            <img src="https://img.icons8.com/ios/40/000000/doge.png" />
+            <img src="https://img.icons8.com/ios/40/000000/doge.png" onclick="showHideMode()"/>
+            <div class="cate-items" id="mode-items">
+                <div class="cate-item-1" id="dark" onclick="darkMode(); bwLogo()">
+                    <img src="https://img.icons8.com/material-two-tone/35/000000/toggle-on--v2.png" /> </div>
+                <div class="cate-item-2" id="partyMode" onclick="partyMode(); bwLogo(); showHideParrot()">
+                    <img src="https://img.icons8.com/ios-glyphs/35/000000/disco-ball.png" /> </div>
+            </div>
         </div>
 
     </div>
@@ -100,7 +106,7 @@
             <!---------------------------------- CATEGORIES - GENERAL (UNDO, REDO, , CLEAR, EXPORT) ---------------------------------->
             <div class="general">
                 <div id="eraser">
-                    <img src="https://img.icons8.com/material-rounded/24/000000/erase.png" title="Eraser"
+                    <img src="https://img.icons8.com/material-rounded/24/000000/erase.png"
                         title="Eraser" />
                 </div>
                 <div class="steps">
@@ -111,38 +117,34 @@
                 <div class="clear" id="clear">
                     <img src="https://img.icons8.com/material-rounded/24/000000/delete-sign.png" title="Clear" />
                 </div>
-                <div class="export constant" id="download">
+                <div class="export lastItem" id="download">
                     <img src="https://img.icons8.com/material-rounded/24/000000/save.png" title="Download Image" />
                 </div>
                 <div>
-                    <img src="https://img.icons8.com/material-rounded/24/000000/line-width.png" title="Line Width" />
+                    <img src="https://img.icons8.com/material-rounded/20/000000/line-width.png" title="Line Width" />
+                        <span class="toolboxDescrption">
+                            Line Width<input class="slider" type="range" id="lineWidth" value="4" min="0" max="50" oninput="lineWidthOutput.value = lineWidth.value">
+                        </span>
+                        <span>
+                            <output id="lineWidthOutput">4</output>
+                        </span>
                 </div>
                 <div class="constant">
-                    <img src="https://img.icons8.com/material-rounded/24/000000/paint-palette.png"
-                        title="Colour Palette" />
+                    <img src="https://img.icons8.com/material-rounded/20/000000/paint-palette.png"
+                        title="Stroke Colour" />
+                        <span>Stroke<input id="strokeFill" type="color">
+                        </span>
                     <br>
-                    <img src="https://img.icons8.com/material-rounded/24/000000/fill-color.png" title="Colour Fill" />
+                    <img src="https://img.icons8.com/material-rounded/20/000000/fill-color.png" title="Colour Fill" />
+                    <span>Fill<input id="objectFill" type="color">
+                    </span>
                 </div>
             </div>
 
 
             <!---------------------------------- CATEGORIES - DYNAMIC ---------------------------------->
             <div class="interactive">
-                <!-- Global - Line Width -->
-                <div>
-                <span>
-                    Line Width<input class="slider" type="range" id="lineWidth" value="4" min="0" max="50" oninput="lineWidthOutput.value = lineWidth.value">
-                </span>
-                <span>
-                    <output id="lineWidthOutput">4</output>
-                </span>
-                </div>
-                <!-- Global - Stroke colour -->
-                <span>Stroke<input id="strokeFill" type="color">
-                </span>
-                <!-- Global - Object fill -->
-                <span>Fill<input id="objectFill" type="color">
-                </span>
+
                 <!-- Polygon - Sides -->
                 <div>
                     <span>
@@ -153,15 +155,15 @@
                     </span>
                 </div>
 
-                <!-- Modes - party & Dark -->
+                <!-- Modes - party & Dark
 
-                <button id="partyMode" onclick="partyMode(); bwLogo(); showHideParrot()">
+                <button class="modeBtn" id="partyMode" onclick="partyMode(); bwLogo(); showHideParrot()">
                     PARTY TIME
                 </button>
         
-                <button id="dark" onclick="darkMode(); bwLogo()">
+                <button class="modeBtn" id="dark" onclick="darkMode(); bwLogo()">
                     Hello Darkness My Old Friend...
-                </button>
+                </button> -->
             </div>
         </div>
 
