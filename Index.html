@@ -73,7 +73,7 @@
 
         <!---------------------------------- CATEGORIES - TEXT ---------------------------------->
 
-        <div class="text cate">
+        <div class="text cate" id="text-box">
             <img src="https://img.icons8.com/material-rounded/40/000000/text.png" />
         </div>
 
@@ -188,7 +188,9 @@
         <!-- The drawing circle functionality  -->
         <script src="./js/shapes/drawing-circle.js" type="text/javascript"></script>
         <!-- The drawing polygon functionality  -->
-        <script src="./js/shapes/drawing-polygon.js" type="text/javascript"></script>        
+        <script src="./js/shapes/drawing-polygon.js" type="text/javascript"></script>   
+       <!-- The text box functionality  -->
+       <script src="./js/text/text-box.js" type="text/javascript"></script>
         <!-- Eraser functionality -->
         <script src="./js/lines/drawing-eraser.js" type="text/javascript"></script>
         <!-- Draw functions -->
@@ -216,6 +218,9 @@
                 $("#drawing-brush").click(() => {
                     currentFunction = new DrawingBrush(contextReal);
                 });
+                $("#text-box").click(() => {
+                    currentFunction = new TextBox(contextReal,contextDraft);
+                }); 
                 $("#eraser").click(() => {
                     currentFunction = new Eraser(contextReal);
                 });
@@ -225,7 +230,6 @@
                 });
             })
         </script>
-
 </body>
 
 </html>
