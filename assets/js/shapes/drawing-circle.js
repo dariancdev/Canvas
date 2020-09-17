@@ -44,7 +44,7 @@ class DrawingCircle extends PaintFunction {
     this.contextReal.fillStyle = objectFill.value;
     this.contextReal.lineWidth = lineWidth.value;
     this.contextReal.strokeStyle = strokeColour.value;
-    // this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
+    this.contextDraft.clearRect(0,0,canvasDraft.width,canvasDraft.height);
     this.contextReal.beginPath();
     // this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextReal.ellipse(this.origX, this.origY, Math.abs(coord[0] - this.origX), Math.abs(coord[1] - this.origY), 0 * Math.PI / 180, 0, 2 * Math.PI)

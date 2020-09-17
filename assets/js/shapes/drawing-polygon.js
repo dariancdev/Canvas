@@ -28,6 +28,7 @@ class DrawingPolygon extends PaintFunction {
       this.contextReal.fillStyle = objectFill.value;
       this.contextReal.lineWidth = lineWidth.value;
       this.contextReal.strokeStyle = strokeColour.value;
+      this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
       this.contextReal.beginPath();
       this.draw(coord[0], coord[1], polygonSides.value, this.contextReal);
       this.contextReal.closePath();
