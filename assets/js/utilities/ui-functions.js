@@ -92,7 +92,7 @@ function darkMode() {
 
 /* ------------------ SHOW & HIDE POLYGON SIDE SLIDER ------------------ */
 
-let polygonSidesContainer = document.getElementsById("polygonSidesContainer")
+let polygonSidesContainer = document.getElementById("polygonSidesContainer")
 
 function showHideSideSlider() {
     if (a === 1 && polygonSidesContainer.style.display === "block") {
