@@ -20,6 +20,8 @@ class Eraser extends PaintFunction {
     onMouseMove() {}
     onMouseUp() {
       this.onFinish();
+      this.context.lineCap = "butt";
+      this.context.lineJoin = "miter";
     }
     onMouseLeave() {}
     onMouseEnter() {}

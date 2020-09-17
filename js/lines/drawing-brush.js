@@ -22,6 +22,10 @@ class DrawingBrush extends PaintFunction {
   onMouseMove() {}
   onMouseUp() {
     this.onFinish();
+    this.context.lineCap = "butt";
+    this.context.lineJoin = "miter";
+    this.context.shadowBlur = 0;
+    this.context.shadowColor = ""; //have to change these back so it doesn't affect the other paint classes
   }
   onMouseLeave() {}
   onMouseEnter() {}

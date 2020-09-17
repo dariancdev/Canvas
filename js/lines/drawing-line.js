@@ -21,7 +21,10 @@ class DrawingLine extends PaintFunction {
     onMouseMove() {}
     onMouseUp() {
       this.onFinish();
+      this.context.lineCap = "butt";
+      this.context.lineJoin = "miter"; //this is here so it changes things back to default
     }
+    
     onMouseLeave() {}
     onMouseEnter() {}
   
