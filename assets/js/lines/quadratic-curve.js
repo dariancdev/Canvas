@@ -7,14 +7,18 @@ class QuadraticCurve extends PaintFunction{
       }
       onMouseDown(coord) {
         //   console.log(this.actionCounter)
-      }
-      onDragging(coord) {}
-    
-      onMouseMove(coord) {
         this.contextDraft.strokeStyle = strokeColour.value;
         this.contextDraft.lineJoin = "round";
         this.contextDraft.lineCap = "round";
         this.contextDraft.lineWidth = lineWidth.value;
+      }
+      onDragging(coord) {}
+    
+      onMouseMove(coord) {
+        // this.contextDraft.strokeStyle = strokeColour.value;
+        // this.contextDraft.lineJoin = "round";
+        // this.contextDraft.lineCap = "round";
+        // this.contextDraft.lineWidth = lineWidth.value;
 
         if(this.actionCounter === 1) {
             this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
