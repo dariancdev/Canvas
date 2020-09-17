@@ -29,7 +29,7 @@ undobtn.addEventListener("click", undo);
 function undo(){
   if(step > 0) {
     step--;
-    console.log(step);
+    // console.log(step);
     canvasPic.src = pushedArray[step];
     // contextReal.clearRect(0,0, canvasReal.width, canvasReal.height);
     canvasPic.onload = function () {
@@ -45,7 +45,7 @@ redobtn.addEventListener("click",redo);
 function redo() {
   if (step < pushedArray.length - 1) {
     step++;
-    console.log(step);
+    // console.log(step);
     canvasPic.src = pushedArray[step];
     // contextReal.clearRect(0,0, canvasReal.width, canvasReal.height);
     canvasPic.onload = function () {
