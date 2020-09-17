@@ -69,6 +69,7 @@ function partyMode() {
 let parrotContainer = document.getElementById("parrotContainer")
 
 function showHideParrot() {
+
     if (a === 1 && parrotContainer.style.display === "block") {
         parrotContainer.style.display = "none";
         a = 0;
@@ -78,8 +79,9 @@ function showHideParrot() {
     }
 }
 
-function bwLogo() {
-    var element = document.getElementById("logo");
+
+function bwLogo(){
+    let element = document.getElementById("logo");
     element.classList.toggle("h1BWToggle");
 }
 

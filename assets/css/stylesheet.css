@@ -223,6 +223,7 @@ header {
     background-color: #ef0a1a;
   }
 
+
   75% {
     background-color: #254878;
   }
@@ -232,7 +233,11 @@ header {
   }
 }
 
-.h1BWToggle {
+.bodyDarkMode{
+  background-color: rgb(60, 60, 60);
+  transition: linear 1s;
+}
+.h1BWToggle{
   font-family: Fredoka One;
   font-size: 20px;
   letter-spacing: 20px;
@@ -243,16 +248,9 @@ header {
   color: #e0e0e0;
 }
 
-.bodyDarkMode {
-  background-color: rgb(60, 60, 60);
-  transition: linear 1s;
-}
-
 .modeBtn {
   border-radius: 10px;
   height: 50px;
   width: 50px;
   font-size: 8px;
-}
-
-/* ------------------ Toggle ------------------ */
+};
