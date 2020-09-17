@@ -6,7 +6,6 @@ class QuadraticCurve extends PaintFunction{
         this.actionCounter = 0;
       }
       onMouseDown(coord) {
-        //   console.log(this.actionCounter)
         this.contextDraft.strokeStyle = strokeColour.value;
         this.contextDraft.lineJoin = "round";
         this.contextDraft.lineCap = "round";
@@ -15,11 +14,6 @@ class QuadraticCurve extends PaintFunction{
       onDragging(coord) {}
     
       onMouseMove(coord) {
-        // this.contextDraft.strokeStyle = strokeColour.value;
-        // this.contextDraft.lineJoin = "round";
-        // this.contextDraft.lineCap = "round";
-        // this.contextDraft.lineWidth = lineWidth.value;
-
         if(this.actionCounter === 1) {
             this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
             this.drawStraight(this.origX,this.origY,coord[0],coord[1],this.contextDraft);
@@ -63,7 +57,7 @@ class QuadraticCurve extends PaintFunction{
             this.onFinish();
         }
         this.contextDraft.lineCap = "butt";
-        this.contextDraft.lineJoin = "miter"; //not sure why this is not affecting the contextDraft when the other functions aren't, and this isn't resetting it either and idk why
+        this.contextDraft.lineJoin = "miter";
         this.contextReal.lineCap = "butt";
         this.contextReal.lineJoin = "miter";
       }
