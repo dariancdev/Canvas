@@ -35,7 +35,7 @@ class Eraser extends PaintFunction {
 
     onFinish(){
       step++;
-      console.log(step);
+      // console.log(step);
       if(step < pushedArray.length){
         pushedArray.length = step;
       }
