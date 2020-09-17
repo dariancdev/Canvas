@@ -1,39 +1,45 @@
 /* ------------------ SHOW ONLY ONE DROP-DOWN MENU ------------------ */
+//changed the drop down menu 
+let a;
+let strokeItems =  document.getElementById("stroke-items")
+let shapeItems =  document.getElementById("shape-items")
+let toolItems =  document.getElementById("tool-items")
 
-var a;
 function showHideStroke() {
-    if (a == 1) {
-        document.getElementById("stroke-items").style.display = "none";
-        return a = 0;
+    if (a === 1 && strokeItems.style.display === "block") {
+        strokeItems.style.display = "none";
+        a = 0;
     } else {
-        document.getElementById("stroke-items").style.display = "block";
-        document.getElementById("shape-items").style.display = "none";
-        document.getElementById("tool-items").style.display = "none";
-        return a = 1;
+        console.log(a)
+        strokeItems.style.display = "block";
+        shapeItems.style.display = "none";
+        toolItems.style.display = "none";
+        a = 1;
     }
 }
 
 function showHideShape() {
-    if (a == 1) {
-        document.getElementById("shape-items").style.display = "none";
-        return a = 0;
+    
+    if (a === 1 && shapeItems.style.display === "block") {
+        shapeItems.style.display = "none";
+        a = 0;
     } else {
-        document.getElementById("shape-items").style.display = "block";
-        document.getElementById("stroke-items").style.display = "none";
-        document.getElementById("tool-items").style.display = "none";
-        return a = 1;
+        shapeItems.style.display = "block";
+        strokeItems.style.display = "none";
+        toolItems.style.display = "none";
+        a = 1;
     }
 }
 
 function showHideTools() {
-    if (a == 1) {
-        document.getElementById("tool-items").style.display = "none";
-        return a = 0;
+    if (a === 1 && toolItems.style.display === "block") {
+        toolItems.style.display = "none";
+        a = 0;
     } else {
-        document.getElementById("tool-items").style.display = "block";
-        document.getElementById("stroke-items").style.display = "none";
-        document.getElementById("shape-items").style.display = "none";
-        return a = 1;
+        toolItems.style.display = "block";
+        strokeItems.style.display = "none";
+        shapeItems.style.display = "none";
+        a = 1;
     }
 }
 
