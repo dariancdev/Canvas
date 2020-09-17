@@ -35,6 +35,8 @@ class StraightLine extends PaintFunction{
         this.onFinish();
         this.contextReal.lineCap = "butt";
         this.contextReal.lineJoin = "miter";
+        this.contextDraft.lineCap = "butt";
+        this.contextDraft.lineJoin = "miter";
       }
       onMouseLeave() {}
       onMouseEnter() {}
