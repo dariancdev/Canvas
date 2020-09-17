@@ -15,6 +15,7 @@ class DrawingRectangle extends PaintFunction {
     this.contextDraft.strokeStyle = strokeColour.value;
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextDraft.beginPath();
+    this.contextDraft.closePath();
     this.contextDraft.fillRect(
       this.origX,
       this.origY,
@@ -27,7 +28,7 @@ class DrawingRectangle extends PaintFunction {
       coord[0] - this.origX,
       coord[1] - this.origY
     );
-    this.contextDraft.closePath();
+   
   }
 
   onMouseMove() {}
@@ -37,6 +38,7 @@ class DrawingRectangle extends PaintFunction {
     this.contextReal.strokeStyle = strokeColour.value;
     this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
     this.contextReal.beginPath();
+    this.contextReal.closePath();
     this.contextReal.fillRect(
       this.origX,
       this.origY,
@@ -49,7 +51,6 @@ class DrawingRectangle extends PaintFunction {
       coord[0] - this.origX,
       coord[1] - this.origY
     );
-    this.contextReal.closePath();
     this.onFinish();
   }
   onMouseLeave() {}

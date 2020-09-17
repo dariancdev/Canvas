@@ -11,19 +11,16 @@ class DrawingPolygon extends PaintFunction {
       this.contextReal.strokeStyle = strokeColour.value;
       this.origX = coord[0];
       this.origY = coord[1];
-      console.log("mousedown")
     }
     onDragging(coord) {
       this.contextDraft.fillStyle = objectFill.value;
       this.contextDraft.lineWidth = lineWidth.value;
       this.contextDraft.strokeStyle = strokeColour.value;
-      // this.contextDraft.polygonSides = polygonSides.value;
       this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
       this.draw(coord[0], coord[1], polygonSides.value, this.contextDraft);
       this.contextDraft.closePath();
       this.contextDraft.fill();
       this.contextDraft.stroke();
-      console.log("dragging")
     }
   
     onMouseMove() {}
@@ -31,14 +28,12 @@ class DrawingPolygon extends PaintFunction {
       this.contextReal.fillStyle = objectFill.value;
       this.contextReal.lineWidth = lineWidth.value;
       this.contextReal.strokeStyle = strokeColour.value;
-      // this.contextReal.polygonSides = polygonSides.value;
       this.contextReal.beginPath();
       this.draw(coord[0], coord[1], polygonSides.value, this.contextReal);
       this.contextReal.closePath();
       this.contextReal.fill();
       this.contextReal.stroke();
       this.onFinish();
-      console.log("mouseup")
     }
     onMouseLeave() {}
     onMouseEnter() {}
