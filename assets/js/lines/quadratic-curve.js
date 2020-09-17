@@ -5,13 +5,13 @@ class QuadraticCurve extends PaintFunction{
         this.contextDraft = contextDraft;
         this.actionCounter = 0;
       }
-      onMouseDown(coord) {
+      onMouseDown() {
         this.contextDraft.strokeStyle = strokeColour.value;
         this.contextDraft.lineJoin = "round";
         this.contextDraft.lineCap = "round";
         this.contextDraft.lineWidth = lineWidth.value;
       }
-      onDragging(coord) {}
+      onDragging() {}
     
       onMouseMove(coord) {
         if(this.actionCounter === 1) {
@@ -31,6 +31,7 @@ class QuadraticCurve extends PaintFunction{
         this.contextReal.lineJoin = "round";
         this.contextReal.lineCap = "round";
         this.contextReal.lineWidth = lineWidth.value;
+     
 
         if(this.actionCounter === 0){
             this.origX = coord[0];
