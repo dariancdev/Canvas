@@ -1,9 +1,9 @@
 /* ------------------ SHOW ONLY ONE DROP-DOWN MENU ------------------ */
 //changed the drop down menu so it works on one click instead of two
 let a;
-let strokeItems =  document.getElementById("stroke-items")
-let shapeItems =  document.getElementById("shape-items")
-let toolItems =  document.getElementById("tool-items")
+let strokeItems = document.getElementById("stroke-items")
+let shapeItems = document.getElementById("shape-items")
+let toolItems = document.getElementById("tool-items")
 let modeItems = document.getElementById("mode-items")
 
 function showHideStroke() {
@@ -79,12 +79,27 @@ function showHideParrot() {
     }
 }
 
+
 function bwLogo(){
     let element = document.getElementById("logo");
     element.classList.toggle("h1BWToggle");
 }
 
-function darkMode(){
+function darkMode() {
     var element = document.body;
     element.classList.toggle("bodyDarkMode");
+}
+
+/* ------------------ SHOW & HIDE POLYGON SIDE SLIDER ------------------ */
+
+let polygonSidesContainer = document.getElementsById("polygonSidesContainer")
+
+function showHideSideSlider() {
+    if (a === 1 && polygonSidesContainer.style.display === "block") {
+        polygonSidesContainer.style.display = "none";
+        a = 0;
+    } else {
+        polygonSidesContainer.style.display = "block";
+        a = 1;
+    }
 }

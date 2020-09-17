@@ -10,9 +10,9 @@ body {
   transition: linear 1s;
 }
 
-header{
+header {
   width: 100vw;
-  height:10vh;
+  height: 10vh;
   display: inline-flex;
   justify-content: center;
 }
@@ -28,16 +28,16 @@ header{
   transform: translate(-50%, 0);
 }
 
-.slider{
+.slider {
   width: 55px;
 }
 
-#parrotContainer{
+#parrotContainer {
   padding-top: 5vh;
   display: none;
 }
 
-#parrotContainer img{
+#parrotContainer img {
   height: 50px;
 }
 
@@ -60,6 +60,15 @@ header{
   flex-direction: column;
 }
 
+.toolbox.left img {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.toolbox.left img:hover {
+  background-color: rgb(182, 179, 179);
+}
+
 .toolbox.right {
   height: 70vh;
   right: 5px;
@@ -69,8 +78,11 @@ header{
   font-weight: bold;
 }
 
-.toolbox img{
+.toolbox img {
   filter: invert(15%) sepia(0%) saturate(482%) hue-rotate(209deg) brightness(90%) contrast(93%);
+  cursor: pointer;
+  padding: 7px 0 7px 0;
+  border-radius: 10px;
 }
 
 .constant {
@@ -79,37 +91,51 @@ header{
   border-bottom: 1px solid #999;
 }
 
-.lastItem{
+.lastItem {
   border-bottom: 1px solid #999;
 }
 
 .canvas {
   top: 50%;
-  left: 50%; 
+  left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
   box-shadow: 0.5px 0.5px 5px 0.5px rgba(0, 0, 0, 0.2);
 }
+
 .constant {
   border-bottom: 1px solid #999;
 }
 
+#polygonSidesContainer {
+  display: none;
+}
+
 /* ------------------ ICONS ------------------ */
 
-.toolbox img {
-  padding: 7px 0 7px 0;
-  filter: invert(15%) sepia(0%) saturate(482%) hue-rotate(209deg) brightness(90%) contrast(93%);
-}
 
-.toolbox img :hover {
-  cursor: pointer;
-}
-
-.toolbox.right img{
+.toolbox.right img {
   cursor: pointer;
   padding: 15px 0 15px 0;
-
+  border-radius: 10px;
 }
+
+.toolbox.right img:hover {
+  background-color: rgb(182, 179, 179);
+}
+
+#strokeFill {
+  border-radius: 10px;
+}
+
+#objectFill {
+  border-radius: 10px;
+}
+
+.polygonSidesContainer {
+  padding-top: 25px;
+}
+
 
 /* ------------------ POPUPS ------------------ */
 .cate {
@@ -138,7 +164,7 @@ header{
 .cate-items div {
   position: absolute;
   left: -15px;
-  background-color:  rgb(240, 240, 240);
+  background-color: rgb(240, 240, 240);
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -147,7 +173,7 @@ header{
 
 .cate-items img {
   position: absolute;
-  left: 13px;
+  left: 10.5px;
   bottom: 5.5px;
 }
 
@@ -169,30 +195,43 @@ header{
 /* ------------------ TEXT ------------------ */
 
 /* to make the text box invisible by default */
-#textInput{
-display: none;
-position: absolute;
-z-index: 5;
-background-color: transparent;
-background-image: none;
-border: 1px dotted gray;
-font-family: Impact;
+#textInput {
+  display: none;
+  position: absolute;
+  z-index: 5;
+  background-color: transparent;
+  background-image: none;
+  border: 1px dotted gray;
+  font-family: Impact;
 }
 
-
-
-
 /* ------------------ DARK & PARTY MODES ------------------ */
-.bodyPartyMode{
+.bodyPartyMode {
   animation: blinkingBackground 2s infinite;
+}
+
+@keyframes blinkingBackground {
+  0% {
+    background-color: #10c018;
   }
-  @keyframes blinkingBackground{
-    0%		{ background-color: #10c018;}
-    25%		{ background-color: #1056c0;}
-    50%		{ background-color: #ef0a1a;}
-    75%		{ background-color: #254878;}
-    100%	        { background-color: #04a1d5;}
+
+  25% {
+    background-color: #1056c0;
   }
+
+  50% {
+    background-color: #ef0a1a;
+  }
+
+
+  75% {
+    background-color: #254878;
+  }
+
+  100% {
+    background-color: #04a1d5;
+  }
+}
 
 .bodyDarkMode{
   background-color: rgb(60, 60, 60);
@@ -206,14 +245,12 @@ font-family: Impact;
   top: 1%;
   left: 50%;
   transform: translate(-50%, 0);
-  color: white;
+  color: #e0e0e0;
 }
 
-.modeBtn{
+.modeBtn {
   border-radius: 10px;
   height: 50px;
   width: 50px;
   font-size: 8px;
-}
-/* ------------------ Toggle ------------------ */
-
+};
