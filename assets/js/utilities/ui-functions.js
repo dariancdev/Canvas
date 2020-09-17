@@ -1,5 +1,5 @@
 /* ------------------ SHOW ONLY ONE DROP-DOWN MENU ------------------ */
-//changed the drop down menu 
+//changed the drop down menu so it works on one click instead of two
 let a;
 let strokeItems =  document.getElementById("stroke-items")
 let shapeItems =  document.getElementById("shape-items")
@@ -10,7 +10,6 @@ function showHideStroke() {
         strokeItems.style.display = "none";
         a = 0;
     } else {
-        console.log(a)
         strokeItems.style.display = "block";
         shapeItems.style.display = "none";
         toolItems.style.display = "none";
@@ -19,7 +18,6 @@ function showHideStroke() {
 }
 
 function showHideShape() {
-    
     if (a === 1 && shapeItems.style.display === "block") {
         shapeItems.style.display = "none";
         a = 0;
