@@ -181,6 +181,10 @@ font-family: Impact;
     100%	        { background-color: #04a1d5;}
   }
 
+.bodyDarkMode{
+  background-color: rgb(60, 60, 60);
+  transition: linear 1s;
+}
 .h1BWToggle{
   font-family: Fredoka One;
   font-size: 20px;
@@ -189,10 +193,5 @@ font-family: Impact;
   top: 1%;
   left: 50%;
   transform: translate(-50%, 0);
-  color: #e0e0e0;
-}
-
-.bodyDarkMode{
-  background-color: rgb(60, 60, 60);
-  transition: linear 1s;
+  color: white;
 }

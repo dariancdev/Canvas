@@ -49,7 +49,7 @@ function partyMode() {
 }
 
 function showHideParrot() {
-    if (a == 1) {
+    if (a === 1) {
         document.getElementById("parrotContainer").style.display = "none";
         return a = 0;
     } else {
@@ -59,7 +59,7 @@ function showHideParrot() {
 }
 
 function bwLogo(){
-    var element = document.getElementById("logo");
+    let element = document.getElementById("logo");
     element.classList.toggle("h1BWToggle");
 }
 

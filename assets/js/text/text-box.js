@@ -18,7 +18,6 @@ class TextBox extends PaintFunction {
     this.textX.push(coord[0]);
     this.textY.push(coord[1]);
 
-    this.fontStartY = this.textY[0];
     $('#textInput').css({
       "display": "block",
       "transform": "translateY(" + coord[1] + "px) translateX(" + coord[0] + "px)",
@@ -35,14 +34,11 @@ class TextBox extends PaintFunction {
   }
   outputText(ctx) {
     let inputText = $('#textInput').val();
-    contextReal.fillText(inputText, this.textX[0], this.textY[0])
-      // + parseInt(lineWidth.value));
+    contextReal.fillText(inputText, this.textX[0], this.textY[0]+parseInt(this.fontSize))
 
     $('#textInput').css({"display":"none","transform":"translateY(0) translateX(0)"});
-    $('#textInput').val('');
+    $('#textInput').val("");
 
-    // this.textX= [];
-    // this.textY = [];
     this.onFinish();
   }
   onFinish(){
