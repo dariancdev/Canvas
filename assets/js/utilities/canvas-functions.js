@@ -5,22 +5,21 @@ contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
 
 /*********************************************************************************/
 
+/***********Making an array to push undo and redo actions onto*************/
+let pushedArray = [];
+let step = 0;
+let canvasPic = new Image();
+
 
 /**************clear canvas function*****************/
 let clearCanvas = document.getElementById("clear");
 clearCanvas.addEventListener("click", eraseCanvas);
 
 function eraseCanvas(){
-contextReal.fillStyle = "white";
-contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
-  // contextReal.clearRect(0,0, canvasReal.width, canvasReal.height);
+    contextReal.fillStyle = "white";
+    contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height);
 }
 //made the clear fill the canvas with white cos clearing it would also clear the background as well
-
-/***********Making an array to push undo and redo actions onto*************/
-let pushedArray = [];
-let step = 0;
-let canvasPic = new Image();
 
 /***************Undo function****************/
 let undobtn = document.getElementById("undo");
