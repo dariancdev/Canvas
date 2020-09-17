@@ -153,6 +153,21 @@ header{
   top: 68px;
 }
 
+/* ------------------ TEXT ------------------ */
+
+/* to make the text box invisible by default */
+#textInput{
+display: none;
+position: absolute;
+z-index: 5;
+background-color: transparent;
+background-image: none;
+border: 1px dotted gray;
+font-family: Impact;
+}
+
+
+
 /* ------------------ DARK & PARTY MODES ------------------ */
 .bodyPartyMode{
   animation: blinkingBackground 2s infinite;
