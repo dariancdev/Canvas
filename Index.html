@@ -51,7 +51,7 @@
                 <div class="cate-item-1" id="straight-line">
                     <img src="https://img.icons8.com/material-rounded/35/000000/vertical-line.png" />
                 </div>
-                <div class="cate-item-2">
+                <div class="cate-item-2" id="quadratic-curve">
                     <img src="https://img.icons8.com/material-rounded/35/000000/vector.png" />
                 </div>
             </div>
@@ -179,6 +179,8 @@
         <script src="./js/lines/drawing-line.js" type="text/javascript"></script>
         <!-- The stright line functionality  -->
         <script src="./js/lines/straight-line.js" type="text/javascript"></script>
+        <!-- The quadratic line functionality  -->
+        <script src="./js/lines/quadratic-curve.js" type="text/javascript"></script>
         <!-- The drawing brush functionality  -->
         <script src="./js/lines/drawing-brush.js" type="text/javascript" async defer></script>
         <!-- The drawing rectangle functionality  -->
@@ -208,6 +210,9 @@
                 $("#drawing-line").click(() => {
                     currentFunction = new DrawingLine(contextReal);
                 });
+                $("#quadratic-curve").click(() => {
+                    currentFunction = new QuadraticCurve(contextReal,contextDraft);
+                });
                 $("#drawing-brush").click(() => {
                     currentFunction = new DrawingBrush(contextReal);
                 });
@@ -220,6 +225,7 @@
                 });
             })
         </script>
+
 </body>
 
 </html>
