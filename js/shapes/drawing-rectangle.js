@@ -6,9 +6,6 @@ class DrawingRectangle extends PaintFunction {
   }
 
   onMouseDown(coord) {
-    this.contextReal.fillStyle = objectFill.value;
-    this.contextReal.lineWidth = lineWidth.value;
-    this.contextReal.strokeStyle = strokeColour.value;
     this.origX = coord[0];
     this.origY = coord[1];
   }
