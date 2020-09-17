@@ -40,7 +40,7 @@ class QuadraticCurve extends PaintFunction{
 
             this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
             this.actionCounter++
-            console.log(this.actionCounter)
+            // console.log(this.actionCounter)
 
         } else if(this.actionCounter === 1) {
             this.finalX = coord[0];
@@ -49,7 +49,7 @@ class QuadraticCurve extends PaintFunction{
             this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
             this.drawQuad(coord[0],coord[1],this.contextDraft);
             this.actionCounter++
-            console.log(this.actionCounter)
+            // console.log(this.actionCounter)
 
         } else if(this.actionCounter === 2){
             this.contextDraft.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
@@ -58,6 +58,8 @@ class QuadraticCurve extends PaintFunction{
             
             this.onFinish();
         }
+        this.contextDraft.lineCap = "butt";
+        this.contextDraft.lineJoin = "miter"; //not sure why this is not affecting the contextDraft when the other functions aren't, and this isn't resetting it either and idk why
         this.contextReal.lineCap = "butt";
         this.contextReal.lineJoin = "miter";
       }
