@@ -65,9 +65,9 @@ header {
   padding-right: 2px;
 }
 
-.toolbox.left img:hover {
+/* .toolbox.left img:hover {
   background-color: rgb(247, 241, 241);
-}
+} */
 
 .toolbox.right {
   height: 70vh;
@@ -120,9 +120,9 @@ header {
   border-radius: 10px;
 }
 
-.toolbox.right img:hover {
+/* .toolbox.right img:hover {
   background-color: rgb(247, 241, 241);
-}
+} */
 
 #strokeFill {
   border-radius: 10px;
